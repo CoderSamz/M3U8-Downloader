@@ -1211,7 +1211,7 @@ async function startDownloadLive(object) {
 
                         //let tsStream = await got.get(uri_ts, {responseType:'buffer', timeout:httpTimeout ,headers:headers}).catch(logger.error).body();
 
-                        await download(uri_ts, dir, {
+                        await download(encodeURI(uri_ts), dir, {
                             filename: filename + ".dl",
                             timeout: httpTimeout,
                             headers: headers,
